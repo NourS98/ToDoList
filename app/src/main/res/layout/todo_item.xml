@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/titleView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@id/delete_imgeView"
+        android:textAppearance="?android:attr/textAppearanceLarge" >
+    </TextView>
+
+    <ImageView
+        android:id="@+id/update_imgeView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="8dp"
+        android:src="@drawable/ic_baseline_update_24"
+        app:tint="@android:color/black" />
+    <ImageView
+        android:id="@+id/delete_imgeView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="8dp"
+        android:layout_toStartOf="@id/update_imgeView"
+        android:src="@drawable/ic_baseline_delete_24"
+        app:tint="@android:color/black"
+        android:layout_toLeftOf="@id/update_imgeView" />
+
+    <TextView
+        android:id="@+id/StatusLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/statusCheckBox"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="17dp"
+        android:text="@string/done_string" >
+    </TextView>
+
+    <CheckBox
+        android:id="@+id/statusCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="52dp"
+        android:layout_toRightOf="@+id/StatusLabel" >
+    </CheckBox>
+
+    <TextView
+        android:id="@+id/PriorityLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/statusCheckBox"
+        android:layout_alignTop="@+id/StatusLabel"
+        android:layout_toLeftOf="@+id/priorityView"
+        android:text="@string/priority_string" >
+    </TextView>
+
+    <TextView
+        android:id="@+id/priorityView"
+        android:layout_width="50dip"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/statusCheckBox"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/StatusLabel" >
+    </TextView>
+
+    <TextView
+        android:id="@+id/DateLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/statusCheckBox"
+        android:text="@string/date_string" >
+    </TextView>
+
+    <TextView
+        android:id="@+id/dateView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/DateLabel"
+        android:layout_toRightOf="@+id/DateLabel" >
+    </TextView>
+
+</RelativeLayout>
